@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: bisque;
+        }
+        table, tr, td {
+            border-collapse: collapse;
+            border-style: none;
+        }
+        .d1 {
+            background-color: darkmagenta;
+            width: 200px;
+            height: 100px;
+            margin-left: 600px;
+            margin-top: 250px;
+            color: yellow;
+            box-shadow: 4px 4px 4px #000000;
+            padding: 20px 20px 20px 20px;
+        }
+        .bts1 {
+            border-radius: 5px;
+            background-color: aqua;
+        }
+        .tbs1 {
+            border-radius: 5px;
+            background-color: green;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <form name="fm1">
+        <div class="d1">
+            <table>
+                <tr>
+                    <td><label for="aval">A</label><input type="text" id="v1" name="aval" placeholder="avalue" required class="tbs1"></td>
+                </tr>
+                <tr>
+                    <td><label for="bval">B</label><input type="text" id="v2" name="bval" placeholder="bvalue" required class="tbs1"></td>
+                </tr>
+                <tr>
+                    <td><label for="cval">C</label><input type="text" id="v3" name="cval" placeholder="cvalue" class="tbs1"></td>
+                </tr>
+                <tr>
+                    <td style="position: relative; left: 20px;">
+                        <input type="button" value="+" class="bts1" onClick="addition()">
+                        <input type="button" value="-" class="bts1" onClick="subtraction()">
+                        <input type="button" value="*" class="bts1" onClick="multiplication()">
+                        <input type="button" value="/" class="bts1" onClick="division()">
+                        <input type="button" value="%" class="bts1" onClick="modulus()">
+                        <input type="button" value="<-" class="bts1" onClick="clearResult()">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        
+        function addition() {
+            let a = parseInt(document.getElementById("v1").value);
+            let b = parseInt(document.getElementById("v2").value);
+            let c = a + b;
+            document.getElementById("v3").value = c;
+        }
+
+        
+        function subtraction() {
+            let a = parseInt(document.getElementById("v1").value);
+            let b = parseInt(document.getElementById("v2").value);
+            let c = a - b;
+            document.getElementById("v3").value = c;
+        }
+
+        
+        function multiplication() {
+            let a = parseInt(document.getElementById("v1").value);
+            let b = parseInt(document.getElementById("v2").value);
+            let c = a * b;
+            document.getElementById("v3").value = c;
+        }
+        function division() {
+            let a = parseInt(document.getElementById("v1").value);
+            let b = parseInt(document.getElementById("v2").value);
+            let c = a / b;
+            document.getElementById("v3").value = c;
+        }
+
+        
+        function modulus() {
+            let a = parseInt(document.getElementById("v1").value);
+            let b = parseInt(document.getElementById("v2").value);
+            let c = a % b;
+            document.getElementById("v3").value = c;
+        }
+
+       
+        function clearResult() {
+            document.getElementById("v1").value = "";
+            document.getElementById("v2").value = "";
+            document.getElementById("v3").value = "";
+        }
+    </script>
+</body>
+</html>

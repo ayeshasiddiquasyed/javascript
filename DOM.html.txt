@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>demo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h5>DOM EXAMPLE</h5>
+<p id="psi">SEE THE MAGIC HERE</p>
+<input type="button" value="clickme" onClick="greet()">
+</body>
+<script type="text/javascript">
+function greet()
+{
+document.getElementById("psi").innerHTML="you successfully clicked button";
+}
+</script>
+</html>
